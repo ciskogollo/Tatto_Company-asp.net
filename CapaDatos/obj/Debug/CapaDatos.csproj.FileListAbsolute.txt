@@ -1,0 +1,9 @@
+F:\ASP.net\Tatto_Company\CapaDatos\obj\Debug\CapaDatos.csprojAssemblyReference.cache
+F:\ASP.net\Tatto_Company\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+F:\ASP.net\Tatto_Company\CapaDatos\bin\Debug\CapaDatos.dll
+F:\ASP.net\Tatto_Company\CapaDatos\bin\Debug\CapaDatos.pdb
+F:\ASP.net\Tatto_Company\CapaDatos\bin\Debug\Entidades.dll
+F:\ASP.net\Tatto_Company\CapaDatos\bin\Debug\Entidades.pdb
+F:\ASP.net\Tatto_Company\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
+F:\ASP.net\Tatto_Company\CapaDatos\obj\Debug\CapaDatos.dll
+F:\ASP.net\Tatto_Company\CapaDatos\obj\Debug\CapaDatos.pdb

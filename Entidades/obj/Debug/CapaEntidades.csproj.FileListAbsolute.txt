@@ -1,0 +1,5 @@
+F:\ASP.net\Tatto_Company\Entidades\bin\Debug\Entidades.dll
+F:\ASP.net\Tatto_Company\Entidades\bin\Debug\Entidades.pdb
+F:\ASP.net\Tatto_Company\Entidades\obj\Debug\CapaEntidades.csproj.CoreCompileInputs.cache
+F:\ASP.net\Tatto_Company\Entidades\obj\Debug\Entidades.dll
+F:\ASP.net\Tatto_Company\Entidades\obj\Debug\Entidades.pdb

@@ -1,0 +1,11 @@
+F:\ASP.net\Tatto_Company\CapaNegocio\obj\Debug\CapaNegocio.csprojAssemblyReference.cache
+F:\ASP.net\Tatto_Company\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+F:\ASP.net\Tatto_Company\CapaNegocio\bin\Debug\CapaNegocio.dll
+F:\ASP.net\Tatto_Company\CapaNegocio\bin\Debug\CapaNegocio.pdb
+F:\ASP.net\Tatto_Company\CapaNegocio\bin\Debug\CapaDatos.dll
+F:\ASP.net\Tatto_Company\CapaNegocio\bin\Debug\Entidades.dll
+F:\ASP.net\Tatto_Company\CapaNegocio\bin\Debug\CapaDatos.pdb
+F:\ASP.net\Tatto_Company\CapaNegocio\bin\Debug\Entidades.pdb
+F:\ASP.net\Tatto_Company\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
+F:\ASP.net\Tatto_Company\CapaNegocio\obj\Debug\CapaNegocio.dll
+F:\ASP.net\Tatto_Company\CapaNegocio\obj\Debug\CapaNegocio.pdb
