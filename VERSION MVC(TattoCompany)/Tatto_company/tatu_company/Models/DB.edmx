@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="tatu_companyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="boleta">
+          <Key>
+            <PropertyRef Name="id_boleta" />
+          </Key>
+          <Property Name="id_boleta" Type="int" Nullable="false" />
+          <Property Name="fecha_hora" Type="date" Nullable="false" />
+          <Property Name="id_venta" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="cliente">
+          <Key>
+            <PropertyRef Name="id_cliente" />
+          </Key>
+          <Property Name="id_cliente" Type="int" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="edad" Type="int" Nullable="false" />
+          <Property Name="telefono" Type="varchar" MaxLength="20" />
+          <Property Name="correo" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="comuna">
+          <Key>
+            <PropertyRef Name="id_comuna" />
+          </Key>
+          <Property Name="id_comuna" Type="int" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sucursal">
+          <Key>
+            <PropertyRef Name="id_sucursal" />
+          </Key>
+          <Property Name="id_sucursal" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="direccion" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="id_comuna" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tatuador">
+          <Key>
+            <PropertyRef Name="id_tatuador" />
+          </Key>
+          <Property Name="id_tatuador" Type="int" Nullable="false" />
+          <Property Name="rut" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="nombres" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="apellidos" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="fec_nac" Type="date" />
+          <Property Name="direccion" Type="varchar" MaxLength="50" />
+          <Property Name="telefono" Type="varchar" MaxLength="200" />
+          <Property Name="genero" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="tatuaje">
+          <Key>
+            <PropertyRef Name="id_tatuaje" />
+          </Key>
+          <Property Name="id_tatuaje" Type="int" Nullable="false" />
+          <Property Name="tamano" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="cant_color" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="sesiones" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="venta">
+          <Key>
+            <PropertyRef Name="id_venta" />
+          </Key>
+          <Property Name="id_venta" Type="int" Nullable="false" />
+          <Property Name="id_cliente" Type="int" Nullable="false" />
+          <Property Name="id_tatuador" Type="int" Nullable="false" />
+          <Property Name="id_sucursal" Type="int" Nullable="false" />
+          <Property Name="fecha_hora" Type="date" Nullable="false" />
+          <Property Name="id_tatuaje" Type="int" Nullable="false" />
+          <Property Name="valor_total" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_boleta_venta">
+          <End Role="venta" Type="Self.venta" Multiplicity="1" />
+          <End Role="boleta" Type="Self.boleta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="venta">
+              <PropertyRef Name="id_venta" />
+            </Principal>
+            <Dependent Role="boleta">
+              <PropertyRef Name="id_venta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_sucursal_comuna">
+          <End Role="comuna" Type="Self.comuna" Multiplicity="1" />
+          <End Role="sucursal" Type="Self.sucursal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="comuna">
+              <PropertyRef Name="id_comuna" />
+            </Principal>
+            <Dependent Role="sucursal">
+              <PropertyRef Name="id_comuna" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_venta_cliente">
+          <End Role="cliente" Type="Self.cliente" Multiplicity="1" />
+          <End Role="venta" Type="Self.venta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cliente">
+              <PropertyRef Name="id_cliente" />
+            </Principal>
+            <Dependent Role="venta">
+              <PropertyRef Name="id_cliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_venta_sucursal">
+          <End Role="sucursal" Type="Self.sucursal" Multiplicity="1" />
+          <End Role="venta" Type="Self.venta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sucursal">
+              <PropertyRef Name="id_sucursal" />
+            </Principal>
+            <Dependent Role="venta">
+              <PropertyRef Name="id_sucursal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_venta_tatuador">
+          <End Role="tatuador" Type="Self.tatuador" Multiplicity="1" />
+          <End Role="venta" Type="Self.venta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tatuador">
+              <PropertyRef Name="id_tatuador" />
+            </Principal>
+            <Dependent Role="venta">
+              <PropertyRef Name="id_tatuador" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_venta_tatuaje">
+          <End Role="tatuaje" Type="Self.tatuaje" Multiplicity="1" />
+          <End Role="venta" Type="Self.venta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tatuaje">
+              <PropertyRef Name="id_tatuaje" />
+            </Principal>
+            <Dependent Role="venta">
+              <PropertyRef Name="id_tatuaje" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="tatu_companyModelStoreContainer">
+          <EntitySet Name="boleta" EntityType="Self.boleta" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="cliente" EntityType="Self.cliente" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="comuna" EntityType="Self.comuna" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sucursal" EntityType="Self.sucursal" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tatuador" EntityType="Self.tatuador" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tatuaje" EntityType="Self.tatuaje" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="venta" EntityType="Self.venta" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_boleta_venta" Association="Self.FK_boleta_venta">
+            <End Role="venta" EntitySet="venta" />
+            <End Role="boleta" EntitySet="boleta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_sucursal_comuna" Association="Self.FK_sucursal_comuna">
+            <End Role="comuna" EntitySet="comuna" />
+            <End Role="sucursal" EntitySet="sucursal" />
+          </AssociationSet>
+          <AssociationSet Name="FK_venta_cliente" Association="Self.FK_venta_cliente">
+            <End Role="cliente" EntitySet="cliente" />
+            <End Role="venta" EntitySet="venta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_venta_sucursal" Association="Self.FK_venta_sucursal">
+            <End Role="sucursal" EntitySet="sucursal" />
+            <End Role="venta" EntitySet="venta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_venta_tatuador" Association="Self.FK_venta_tatuador">
+            <End Role="tatuador" EntitySet="tatuador" />
+            <End Role="venta" EntitySet="venta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_venta_tatuaje" Association="Self.FK_venta_tatuaje">
+            <End Role="tatuaje" EntitySet="tatuaje" />
+            <End Role="venta" EntitySet="venta" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="tatu_companyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="boleta">
+          <Key>
+            <PropertyRef Name="id_boleta" />
+          </Key>
+          <Property Name="id_boleta" Type="Int32" Nullable="false" />
+          <Property Name="fecha_hora" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="id_venta" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="venta" Relationship="Self.FK_boleta_venta" FromRole="boleta" ToRole="venta" />
+        </EntityType>
+        <EntityType Name="cliente">
+          <Key>
+            <PropertyRef Name="id_cliente" />
+          </Key>
+          <Property Name="id_cliente" Type="Int32" Nullable="false" />
+          <Property Name="nombre" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="edad" Type="Int32" Nullable="false" />
+          <Property Name="telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="venta" Relationship="Self.FK_venta_cliente" FromRole="cliente" ToRole="venta" />
+        </EntityType>
+        <EntityType Name="comuna">
+          <Key>
+            <PropertyRef Name="id_comuna" />
+          </Key>
+          <Property Name="id_comuna" Type="Int32" Nullable="false" />
+          <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="sucursal" Relationship="Self.FK_sucursal_comuna" FromRole="comuna" ToRole="sucursal" />
+        </EntityType>
+        <EntityType Name="sucursal">
+          <Key>
+            <PropertyRef Name="id_sucursal" />
+          </Key>
+          <Property Name="id_sucursal" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_comuna" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="comuna" Relationship="Self.FK_sucursal_comuna" FromRole="sucursal" ToRole="comuna" />
+          <NavigationProperty Name="venta" Relationship="Self.FK_venta_sucursal" FromRole="sucursal" ToRole="venta" />
+        </EntityType>
+        <EntityType Name="tatuador">
+          <Key>
+            <PropertyRef Name="id_tatuador" />
+          </Key>
+          <Property Name="id_tatuador" Type="Int32" Nullable="false" />
+          <Property Name="rut" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nombres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="apellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fec_nac" Type="DateTime" Precision="0" />
+          <Property Name="direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="telefono" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="genero" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="venta" Relationship="Self.FK_venta_tatuador" FromRole="tatuador" ToRole="venta" />
+        </EntityType>
+        <EntityType Name="tatuaje">
+          <Key>
+            <PropertyRef Name="id_tatuaje" />
+          </Key>
+          <Property Name="id_tatuaje" Type="Int32" Nullable="false" />
+          <Property Name="tamano" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="cant_color" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="sesiones" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="venta" Relationship="Self.FK_venta_tatuaje" FromRole="tatuaje" ToRole="venta" />
+        </EntityType>
+        <EntityType Name="venta">
+          <Key>
+            <PropertyRef Name="id_venta" />
+          </Key>
+          <Property Name="id_venta" Type="Int32" Nullable="false" />
+          <Property Name="id_cliente" Type="Int32" Nullable="false" />
+          <Property Name="id_tatuador" Type="Int32" Nullable="false" />
+          <Property Name="id_sucursal" Type="Int32" Nullable="false" />
+          <Property Name="fecha_hora" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="id_tatuaje" Type="Int32" Nullable="false" />
+          <Property Name="valor_total" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="boleta" Relationship="Self.FK_boleta_venta" FromRole="venta" ToRole="boleta" />
+          <NavigationProperty Name="cliente" Relationship="Self.FK_venta_cliente" FromRole="venta" ToRole="cliente" />
+          <NavigationProperty Name="sucursal" Relationship="Self.FK_venta_sucursal" FromRole="venta" ToRole="sucursal" />
+          <NavigationProperty Name="tatuador" Relationship="Self.FK_venta_tatuador" FromRole="venta" ToRole="tatuador" />
+          <NavigationProperty Name="tatuaje" Relationship="Self.FK_venta_tatuaje" FromRole="venta" ToRole="tatuaje" />
+        </EntityType>
+        <Association Name="FK_boleta_venta">
+          <End Role="venta" Type="Self.venta" Multiplicity="1" />
+          <End Role="boleta" Type="Self.boleta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="venta">
+              <PropertyRef Name="id_venta" />
+            </Principal>
+            <Dependent Role="boleta">
+              <PropertyRef Name="id_venta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_venta_cliente">
+          <End Role="cliente" Type="Self.cliente" Multiplicity="1" />
+          <End Role="venta" Type="Self.venta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cliente">
+              <PropertyRef Name="id_cliente" />
+            </Principal>
+            <Dependent Role="venta">
+              <PropertyRef Name="id_cliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_sucursal_comuna">
+          <End Role="comuna" Type="Self.comuna" Multiplicity="1" />
+          <End Role="sucursal" Type="Self.sucursal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="comuna">
+              <PropertyRef Name="id_comuna" />
+            </Principal>
+            <Dependent Role="sucursal">
+              <PropertyRef Name="id_comuna" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_venta_sucursal">
+          <End Role="sucursal" Type="Self.sucursal" Multiplicity="1" />
+          <End Role="venta" Type="Self.venta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sucursal">
+              <PropertyRef Name="id_sucursal" />
+            </Principal>
+            <Dependent Role="venta">
+              <PropertyRef Name="id_sucursal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_venta_tatuador">
+          <End Role="tatuador" Type="Self.tatuador" Multiplicity="1" />
+          <End Role="venta" Type="Self.venta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tatuador">
+              <PropertyRef Name="id_tatuador" />
+            </Principal>
+            <Dependent Role="venta">
+              <PropertyRef Name="id_tatuador" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_venta_tatuaje">
+          <End Role="tatuaje" Type="Self.tatuaje" Multiplicity="1" />
+          <End Role="venta" Type="Self.venta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tatuaje">
+              <PropertyRef Name="id_tatuaje" />
+            </Principal>
+            <Dependent Role="venta">
+              <PropertyRef Name="id_tatuaje" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="tatu_companyEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="boleta" EntityType="Self.boleta" />
+          <EntitySet Name="cliente" EntityType="Self.cliente" />
+          <EntitySet Name="comuna" EntityType="Self.comuna" />
+          <EntitySet Name="sucursal" EntityType="Self.sucursal" />
+          <EntitySet Name="tatuador" EntityType="Self.tatuador" />
+          <EntitySet Name="tatuaje" EntityType="Self.tatuaje" />
+          <EntitySet Name="venta" EntityType="Self.venta" />
+          <AssociationSet Name="FK_boleta_venta" Association="Self.FK_boleta_venta">
+            <End Role="venta" EntitySet="venta" />
+            <End Role="boleta" EntitySet="boleta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_venta_cliente" Association="Self.FK_venta_cliente">
+            <End Role="cliente" EntitySet="cliente" />
+            <End Role="venta" EntitySet="venta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_sucursal_comuna" Association="Self.FK_sucursal_comuna">
+            <End Role="comuna" EntitySet="comuna" />
+            <End Role="sucursal" EntitySet="sucursal" />
+          </AssociationSet>
+          <AssociationSet Name="FK_venta_sucursal" Association="Self.FK_venta_sucursal">
+            <End Role="sucursal" EntitySet="sucursal" />
+            <End Role="venta" EntitySet="venta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_venta_tatuador" Association="Self.FK_venta_tatuador">
+            <End Role="tatuador" EntitySet="tatuador" />
+            <End Role="venta" EntitySet="venta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_venta_tatuaje" Association="Self.FK_venta_tatuaje">
+            <End Role="tatuaje" EntitySet="tatuaje" />
+            <End Role="venta" EntitySet="venta" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="tatu_companyModelStoreContainer" CdmEntityContainer="tatu_companyEntities">
+          <EntitySetMapping Name="boleta">
+            <EntityTypeMapping TypeName="tatu_companyModel.boleta">
+              <MappingFragment StoreEntitySet="boleta">
+                <ScalarProperty Name="id_boleta" ColumnName="id_boleta" />
+                <ScalarProperty Name="fecha_hora" ColumnName="fecha_hora" />
+                <ScalarProperty Name="id_venta" ColumnName="id_venta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cliente">
+            <EntityTypeMapping TypeName="tatu_companyModel.cliente">
+              <MappingFragment StoreEntitySet="cliente">
+                <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="edad" ColumnName="edad" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="correo" ColumnName="correo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="comuna">
+            <EntityTypeMapping TypeName="tatu_companyModel.comuna">
+              <MappingFragment StoreEntitySet="comuna">
+                <ScalarProperty Name="id_comuna" ColumnName="id_comuna" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sucursal">
+            <EntityTypeMapping TypeName="tatu_companyModel.sucursal">
+              <MappingFragment StoreEntitySet="sucursal">
+                <ScalarProperty Name="id_sucursal" ColumnName="id_sucursal" />
+                <ScalarProperty Name="direccion" ColumnName="direccion" />
+                <ScalarProperty Name="id_comuna" ColumnName="id_comuna" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tatuador">
+            <EntityTypeMapping TypeName="tatu_companyModel.tatuador">
+              <MappingFragment StoreEntitySet="tatuador">
+                <ScalarProperty Name="id_tatuador" ColumnName="id_tatuador" />
+                <ScalarProperty Name="rut" ColumnName="rut" />
+                <ScalarProperty Name="nombres" ColumnName="nombres" />
+                <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+                <ScalarProperty Name="fec_nac" ColumnName="fec_nac" />
+                <ScalarProperty Name="direccion" ColumnName="direccion" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="genero" ColumnName="genero" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tatuaje">
+            <EntityTypeMapping TypeName="tatu_companyModel.tatuaje">
+              <MappingFragment StoreEntitySet="tatuaje">
+                <ScalarProperty Name="id_tatuaje" ColumnName="id_tatuaje" />
+                <ScalarProperty Name="tamano" ColumnName="tamano" />
+                <ScalarProperty Name="cant_color" ColumnName="cant_color" />
+                <ScalarProperty Name="sesiones" ColumnName="sesiones" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="venta">
+            <EntityTypeMapping TypeName="tatu_companyModel.venta">
+              <MappingFragment StoreEntitySet="venta">
+                <ScalarProperty Name="id_venta" ColumnName="id_venta" />
+                <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+                <ScalarProperty Name="id_tatuador" ColumnName="id_tatuador" />
+                <ScalarProperty Name="id_sucursal" ColumnName="id_sucursal" />
+                <ScalarProperty Name="fecha_hora" ColumnName="fecha_hora" />
+                <ScalarProperty Name="id_tatuaje" ColumnName="id_tatuaje" />
+                <ScalarProperty Name="valor_total" ColumnName="valor_total" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

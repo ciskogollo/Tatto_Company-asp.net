@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a88f77d249824211888bbfc3addd3118" Name="Diagram1">
+        <EntityTypeShape EntityType="tatu_companyModel.boleta" Width="1.5" PointX="7.5" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="tatu_companyModel.cliente" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="tatu_companyModel.comuna" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="tatu_companyModel.sucursal" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="tatu_companyModel.tatuador" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="tatu_companyModel.tatuaje" Width="1.5" PointX="3" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="tatu_companyModel.venta" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="tatu_companyModel.FK_boleta_venta" ManuallyRouted="false" />
+        <AssociationConnector Association="tatu_companyModel.FK_venta_cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="tatu_companyModel.FK_sucursal_comuna" ManuallyRouted="false" />
+        <AssociationConnector Association="tatu_companyModel.FK_venta_sucursal" ManuallyRouted="false" />
+        <AssociationConnector Association="tatu_companyModel.FK_venta_tatuador" ManuallyRouted="false" />
+        <AssociationConnector Association="tatu_companyModel.FK_venta_tatuaje" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
