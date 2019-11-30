@@ -31,9 +31,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,15 +49,75 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="boleta.cs">
+      <DependentUpon>TattoEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="cliente.cs">
+      <DependentUpon>TattoEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="comuna.cs">
+      <DependentUpon>TattoEDM.tt</DependentUpon>
+    </Compile>
     <Compile Include="Conexion.cs" />
-    <Compile Include="VentasDatos.cs" />
+    <Compile Include="sucursal.cs">
+      <DependentUpon>TattoEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>TattoEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TattoEDM.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TattoEDM.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TattoEDM.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TattoEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TattoEDM.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TattoEDM.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="tatuador.cs">
+      <DependentUpon>TattoEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tatuaje.cs">
+      <DependentUpon>TattoEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="venta.cs">
+      <DependentUpon>TattoEDM.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Entidades\CapaEntidades.csproj">
-      <Project>{9db6cb60-161e-430a-99a3-bc3f2386e5fd}</Project>
-      <Name>CapaEntidades</Name>
-    </ProjectReference>
+    <EntityDeploy Include="TattoEDM.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TattoEDM.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+    <None Include="TattoEDM.edmx.diagram">
+      <DependentUpon>TattoEDM.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TattoEDM.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TattoEDM.Context.cs</LastGenOutput>
+      <DependentUpon>TattoEDM.edmx</DependentUpon>
+    </Content>
+    <Content Include="TattoEDM.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TattoEDM.edmx</DependentUpon>
+      <LastGenOutput>TattoEDM.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

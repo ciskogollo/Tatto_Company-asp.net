@@ -38,5 +38,30 @@ namespace CapaEntidades
         public int Id_tatuaje { get => id_tatuaje; set => id_tatuaje = value; }
         public DateTime Fecha_hora { get => fecha_hora; set => fecha_hora = value; }
         public int Valor_total { get => valor_total; set => valor_total = value; }
+
+        public bool Agregar()
+        {
+            try
+            {
+                CapaDatos.venta vents = new CapaDatos.venta();
+                vents.id_venta = this.id_venta;
+                Entidades.CommonBC.tatu_CompanyEntities.venta.Add(vents);
+                Entidades.CommonBC.tatu_CompanyEntities.SaveChanges();
+
+                return true;
+            }catch(Exception ex)
+            {
+                return false;
+            }
+        }
+
+        public bool Buscar()
+        {
+            try
+            {
+                CapaDatos.venta vents = Entidades.CommonBC.tatu_CompanyEntities.venta.First(suck => suck.id_venta == this.id_venta);
+                return true;
+            }
+        }
     }
 }
