@@ -21,20 +21,23 @@
             <div class="col">
                 <div class="form-group">
                     <label for="selIDCliente">Cliente:</label>
-                    <asp:DropDownList ID="selIDCliente" runat="server" CssClass="form-control" placeholder="Elegir Cliente...">
+                    <asp:DropDownList ID="selCliente" runat="server" CssClass="form-control" placeholder="Elegir Cliente..." OnSelectedIndexChanged="selCliente_SelectedIndexChanged" DataSourceID="selClienteDS" DataTextField="nombre" DataValueField="id_cliente">
                     </asp:DropDownList>
+                    <asp:SqlDataSource ID="selClienteDS" runat="server" ConnectionString="<%$ ConnectionStrings:tatu_companyConnectionString %>" SelectCommand="SELECT [nombre], [id_cliente] FROM [cliente] ORDER BY [nombre]"></asp:SqlDataSource>
                 </div>
                 <div class="form-group">
                     <label for="selIDTatuador">Tatuador:</label>
 
-                    <asp:DropDownList ID="selIDTatuador" runat="server" CssClass="form-control" placeholder="Elegir Tatuador...">
+                    <asp:DropDownList ID="selTatuador" runat="server" CssClass="form-control" placeholder="Elegir Tatuador..." DataSourceID="selTatuadorSDS" DataTextField="nombres" DataValueField="id_tatuador">
                     </asp:DropDownList>
+                    <asp:SqlDataSource ID="selTatuadorSDS" runat="server" ConnectionString="<%$ ConnectionStrings:tatu_companyConnectionString2 %>" SelectCommand="SELECT [id_tatuador], [nombres], [rut], [apellidos] FROM [tatuador] ORDER BY [apellidos], [nombres]"></asp:SqlDataSource>
                 </div>
                 <div class="form-group">
                     <label for="selIDSucursal">Sucursal:</label>
 
-                    <asp:DropDownList ID="selIDSucursal" runat="server" CssClass="form-control" placeholder="Elegir Sucursal...">
+                    <asp:DropDownList ID="selSucursal" runat="server" CssClass="form-control" placeholder="Elegir Sucursal..." DataSourceID="selSucursalSDS" DataTextField="direccion" DataValueField="id_sucursal">
                     </asp:DropDownList>
+                    <asp:SqlDataSource ID="selSucursalSDS" runat="server" ConnectionString="<%$ ConnectionStrings:tatu_companyConnectionString %>" SelectCommand="SELECT * FROM [sucursal]"></asp:SqlDataSource>
                 </div>
                 <div class="form-group">
                     <label for="calendarFecha">Fecha:</label>

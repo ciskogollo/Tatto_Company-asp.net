@@ -9,3 +9,21 @@ F:\ASP.net\Tatto_Company\CapaNegocio\bin\Debug\Entidades.pdb
 F:\ASP.net\Tatto_Company\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
 F:\ASP.net\Tatto_Company\CapaNegocio\obj\Debug\CapaNegocio.dll
 F:\ASP.net\Tatto_Company\CapaNegocio\obj\Debug\CapaNegocio.pdb
+F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaNegocio\bin\Debug\CapaNegocio.dll.config
+F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaNegocio\bin\Debug\CapaNegocio.dll
+F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaNegocio\bin\Debug\CapaNegocio.pdb
+F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaNegocio\bin\Debug\CapaDatos.dll
+F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaNegocio\bin\Debug\Entidades.dll
+F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaNegocio\bin\Debug\EntityFramework.dll
+F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaNegocio\bin\Debug\EntityFramework.SqlServer.dll
+F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaNegocio\bin\Debug\CapaDatos.pdb
+F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaNegocio\bin\Debug\CapaDatos.dll.config
+F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaNegocio\bin\Debug\Entidades.pdb
+F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaNegocio\bin\Debug\Entidades.dll.config
+F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaNegocio\bin\Debug\EntityFramework.xml
+F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaNegocio\bin\Debug\EntityFramework.SqlServer.xml
+F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaNegocio\obj\Debug\CapaNegocio.csprojAssemblyReference.cache
+F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
+F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaNegocio\obj\Debug\CapaNegocio.dll
+F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaNegocio\obj\Debug\CapaNegocio.pdb

@@ -22,31 +22,58 @@ namespace CapaPresentacion {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Control selIDCliente.
+        /// Control selCliente.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList selIDCliente;
+        protected global::System.Web.UI.WebControls.DropDownList selCliente;
         
         /// <summary>
-        /// Control selIDTatuador.
+        /// Control selClienteDS.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList selIDTatuador;
+        protected global::System.Web.UI.WebControls.SqlDataSource selClienteDS;
         
         /// <summary>
-        /// Control selIDSucursal.
+        /// Control selTatuador.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList selIDSucursal;
+        protected global::System.Web.UI.WebControls.DropDownList selTatuador;
+        
+        /// <summary>
+        /// Control selTatuadorSDS.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource selTatuadorSDS;
+        
+        /// <summary>
+        /// Control selSucursal.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList selSucursal;
+        
+        /// <summary>
+        /// Control selSucursalSDS.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource selSucursalSDS;
         
         /// <summary>
         /// Control calendarFecha.

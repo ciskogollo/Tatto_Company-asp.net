@@ -3,3 +3,16 @@ F:\ASP.net\Tatto_Company\Entidades\bin\Debug\Entidades.pdb
 F:\ASP.net\Tatto_Company\Entidades\obj\Debug\CapaEntidades.csproj.CoreCompileInputs.cache
 F:\ASP.net\Tatto_Company\Entidades\obj\Debug\Entidades.dll
 F:\ASP.net\Tatto_Company\Entidades\obj\Debug\Entidades.pdb
+F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\Entidades\obj\Debug\CapaEntidades.csprojAssemblyReference.cache
+F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\Entidades\obj\Debug\CapaEntidades.csproj.CoreCompileInputs.cache
+F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\Entidades\bin\Debug\Entidades.dll.config
+F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\Entidades\bin\Debug\Entidades.dll
+F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\Entidades\bin\Debug\Entidades.pdb
+F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\Entidades\bin\Debug\CapaDatos.dll
+F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\Entidades\bin\Debug\EntityFramework.dll
+F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\Entidades\bin\Debug\CapaDatos.pdb
+F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\Entidades\bin\Debug\CapaDatos.dll.config
+F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\Entidades\bin\Debug\EntityFramework.xml
+F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\Entidades\obj\Debug\CapaEntidades.csproj.CopyComplete
+F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\Entidades\obj\Debug\Entidades.dll
+F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\Entidades\obj\Debug\Entidades.pdb

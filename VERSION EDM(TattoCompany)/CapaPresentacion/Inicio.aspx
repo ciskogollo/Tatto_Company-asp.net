@@ -4,10 +4,16 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="MenuPlaceHolder1" runat="server">
     <li class="nav-item">
-        <a class="nav-link" href="#">Agregar</a>
+        <a class="nav-link" href="#">Quienes Somos</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">Listar</a>
+        <a class="nav-link" href="#">Perfil</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Configuraciòn</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Cerrar Sesión</a>
     </li>
 </asp:Content>
 
