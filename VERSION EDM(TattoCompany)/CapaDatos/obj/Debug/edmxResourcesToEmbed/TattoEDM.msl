@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="tatu_companyModelStoreContainer" CdmEntityContainer="tatu_companyEntities">
+    <EntitySetMapping Name="boleta">
+      <EntityTypeMapping TypeName="tatu_companyModel.boleta">
+        <MappingFragment StoreEntitySet="boleta">
+          <ScalarProperty Name="id_boleta" ColumnName="id_boleta" />
+          <ScalarProperty Name="fecha_hora" ColumnName="fecha_hora" />
+          <ScalarProperty Name="id_venta" ColumnName="id_venta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cliente">
+      <EntityTypeMapping TypeName="tatu_companyModel.cliente">
+        <MappingFragment StoreEntitySet="cliente">
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="edad" ColumnName="edad" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="comuna">
+      <EntityTypeMapping TypeName="tatu_companyModel.comuna">
+        <MappingFragment StoreEntitySet="comuna">
+          <ScalarProperty Name="id_comuna" ColumnName="id_comuna" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sucursal">
+      <EntityTypeMapping TypeName="tatu_companyModel.sucursal">
+        <MappingFragment StoreEntitySet="sucursal">
+          <ScalarProperty Name="id_sucursal" ColumnName="id_sucursal" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="id_comuna" ColumnName="id_comuna" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="tatu_companyModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tatuador">
+      <EntityTypeMapping TypeName="tatu_companyModel.tatuador">
+        <MappingFragment StoreEntitySet="tatuador">
+          <ScalarProperty Name="id_tatuador" ColumnName="id_tatuador" />
+          <ScalarProperty Name="rut" ColumnName="rut" />
+          <ScalarProperty Name="nombres" ColumnName="nombres" />
+          <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+          <ScalarProperty Name="fec_nac" ColumnName="fec_nac" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="genero" ColumnName="genero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tatuaje">
+      <EntityTypeMapping TypeName="tatu_companyModel.tatuaje">
+        <MappingFragment StoreEntitySet="tatuaje">
+          <ScalarProperty Name="id_tatuaje" ColumnName="id_tatuaje" />
+          <ScalarProperty Name="tamano" ColumnName="tamano" />
+          <ScalarProperty Name="cant_color" ColumnName="cant_color" />
+          <ScalarProperty Name="sesiones" ColumnName="sesiones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="venta">
+      <EntityTypeMapping TypeName="tatu_companyModel.venta">
+        <MappingFragment StoreEntitySet="venta">
+          <ScalarProperty Name="id_venta" ColumnName="id_venta" />
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="id_tatuador" ColumnName="id_tatuador" />
+          <ScalarProperty Name="id_sucursal" ColumnName="id_sucursal" />
+          <ScalarProperty Name="fecha_hora" ColumnName="fecha_hora" />
+          <ScalarProperty Name="id_tatuaje" ColumnName="id_tatuaje" />
+          <ScalarProperty Name="valor_total" ColumnName="valor_total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
