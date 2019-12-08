@@ -235,7 +235,6 @@ F:\ASP.net\Tatto_Company\CapaPresentacion\bin\CapaNegocio.pdb
 F:\ASP.net\Tatto_Company\CapaPresentacion\bin\Entidades.pdb
 F:\ASP.net\Tatto_Company\CapaPresentacion\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 F:\ASP.net\Tatto_Company\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
-F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
 F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaPresentacion\bin\CapaPresentacion.dll.config
 F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaPresentacion\bin\CapaPresentacion.dll
 F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaPresentacion\bin\CapaPresentacion.pdb
@@ -302,6 +301,7 @@ F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\Cap
 F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaPresentacion\bin\EntityFramework.xml
 F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaPresentacion\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaPresentacion\obj\Debug\CapaPresentacion.csprojAssemblyReference.cache
+F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
 F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
 F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaPresentacion\obj\Debug\CapaPresentacion.dll
 F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaPresentacion\obj\Debug\CapaPresentacion.pdb

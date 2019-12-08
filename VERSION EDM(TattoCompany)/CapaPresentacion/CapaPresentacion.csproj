@@ -89,6 +89,7 @@
     <Content Include="vendor\jquery\jquery.slim.js" />
     <Content Include="vendor\jquery\jquery.slim.min.js" />
     <Content Include="ventas.aspx" />
+    <Content Include="ventasListar.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -134,6 +135,13 @@
     </Compile>
     <Compile Include="ventas.aspx.designer.cs">
       <DependentUpon>ventas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ventasListar.aspx.cs">
+      <DependentUpon>ventasListar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ventasListar.aspx.designer.cs">
+      <DependentUpon>ventasListar.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
