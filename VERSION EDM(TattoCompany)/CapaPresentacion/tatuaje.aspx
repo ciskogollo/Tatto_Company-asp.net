@@ -22,7 +22,7 @@
             <div class="col">
                 <div class="form-group">
                     <label for="selSize">TAMAÑO:</label>
-                    <asp:TextBox ID="txtTamano" runat="server" OnTextChanged="txtTamano_TextChanged"></asp:TextBox>
+                    <asp:TextBox ID="txtTamano" runat="server"></asp:TextBox>
                 </div>
                 <div class="form-group">
                     <label for="selCantColor">CANTIDAD COLORES:</label>

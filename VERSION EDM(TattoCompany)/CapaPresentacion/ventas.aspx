@@ -21,7 +21,7 @@
             <div class="col">
                 <div class="form-group">
                     <label for="selIDCliente">Cliente:</label>
-                    <asp:DropDownList ID="selCliente" runat="server" CssClass="form-control" placeholder="Elegir Cliente..." OnSelectedIndexChanged="selCliente_SelectedIndexChanged" DataSourceID="selClienteDS" DataTextField="nombre" DataValueField="id_cliente">
+                    <asp:DropDownList ID="selCliente" runat="server" CssClass="form-control" placeholder="Elegir Cliente..." DataSourceID="selClienteDS" DataTextField="nombre" DataValueField="id_cliente">
                     </asp:DropDownList>
                     <asp:SqlDataSource ID="selClienteDS" runat="server" ConnectionString="<%$ ConnectionStrings:tatu_companyConnectionString %>" SelectCommand="SELECT [nombre], [id_cliente] FROM [cliente] ORDER BY [nombre]"></asp:SqlDataSource>
                 </div>
