@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace CapaPresentacion
 {
-    public partial class paciente : System.Web.UI.Page
+    public partial class tatuaje : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -18,5 +18,6 @@ namespace CapaPresentacion
         {
 
         }
+
     }
 }

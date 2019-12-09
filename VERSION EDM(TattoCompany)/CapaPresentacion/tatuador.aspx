@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Page.Master" AutoEventWireup="true" CodeBehind="tatuador.aspx.cs" Inherits="CapaPresentacion.medicamento" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Page.Master" AutoEventWireup="true" CodeBehind="tatuador.aspx.cs" Inherits="CapaPresentacion.tatuador" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 
@@ -21,17 +21,14 @@
             <div class="col">
                 <div class="form-group">
                     <label for="txtRut">RUT:</label>
-
                     <asp:TextBox ID="txtRut" runat="server" CssClass="form-control" placeholder="Ingrese RUT..."></asp:TextBox>
                 </div>
                 <div class="form-group">
                     <label for="txtNombre">Nombre:</label>
-
                     <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" placeholder="Ingrese un Nombre"></asp:TextBox>
                 </div>
                 <div class="form-group">
                     <label for="txtApellidos">Apellidos:</label>
-
                     <asp:TextBox ID="txtApellidos" runat="server" CssClass="form-control" placeholder="Ingrese los Apellidos"></asp:TextBox>
                 </div>
                 <div class="form-group">

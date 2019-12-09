@@ -52,8 +52,8 @@
     <Compile Include="Cliente.cs" />
     <Compile Include="CommonBC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="tatuador.cs" />
-    <Compile Include="tatuaje.cs" />
+    <Compile Include="Tatuador.cs" />
+    <Compile Include="Tatuaje.cs" />
     <Compile Include="Venta.cs" />
   </ItemGroup>
   <ItemGroup>

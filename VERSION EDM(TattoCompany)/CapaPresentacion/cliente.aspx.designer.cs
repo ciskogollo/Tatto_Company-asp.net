@@ -10,7 +10,7 @@
 namespace CapaPresentacion {
     
     
-    public partial class medico {
+    public partial class cliente {
         
         /// <summary>
         /// Control form1.

@@ -27,9 +27,5 @@ namespace CapaPresentacion
             objVenta.Agregar();
         }
 
-        protected void selCliente_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

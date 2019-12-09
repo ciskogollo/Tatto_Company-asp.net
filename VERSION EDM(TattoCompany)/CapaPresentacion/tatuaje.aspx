@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Page.Master" AutoEventWireup="true" CodeBehind="tatuaje.aspx.cs" Inherits="CapaPresentacion.paciente" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Page.Master" AutoEventWireup="true" CodeBehind="tatuaje.aspx.cs" Inherits="CapaPresentacion.tatuaje" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 
@@ -22,9 +22,7 @@
             <div class="col">
                 <div class="form-group">
                     <label for="selSize">TAMAÑO:</label>
-
-                    <asp:DropDownList ID="selSize" runat="server" CssClass="form-control" placeholder="Elegir Tamaño...">
-                    </asp:DropDownList>
+                    <asp:TextBox ID="txtTamano" runat="server" OnTextChanged="txtTamano_TextChanged"></asp:TextBox>
                 </div>
                 <div class="form-group">
                     <label for="selCantColor">CANTIDAD COLORES:</label>

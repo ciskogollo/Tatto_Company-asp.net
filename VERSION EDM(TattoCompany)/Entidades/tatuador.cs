@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaEntidades
 {
-    public class tatuador
+    public class Tatuador
     {
         private int id_tatuador;
         private String rut;
@@ -17,10 +17,11 @@ namespace CapaEntidades
         private String telefono;
         private char genero;
 
-        public tatuador(){
+        public Tatuador()
+        {
         }
 
-        public tatuador(int id_tatuador, string rut, string nombres, string apellidos, DateTime fecha_nacimiento, string direccion, string telefono, char genero)
+        public Tatuador(int id_tatuador, string rut, string nombres, string apellidos, DateTime fecha_nacimiento, string direccion, string telefono, char genero)
         {
             this.Id_tatuador = id_tatuador;
             this.Rut = rut;
@@ -40,6 +41,91 @@ namespace CapaEntidades
         public string Direccion { get => direccion; set => direccion = value; }
         public string Telefono { get => telefono; set => telefono = value; }
         public char Genero { get => genero; set => genero = value; }
-    }
 
+
+        public bool Agregar()
+        {
+            try
+            {
+                CapaDatos.tatuador tatuad = new CapaDatos.tatuador();
+                tatuad.id_tatuador = this.id_tatuador;
+                tatuad.rut = this.rut;
+                tatuad.nombres = this.nombres;
+                tatuad.apellidos = this.apellidos;
+                tatuad.fec_nac = this.fecha_nacimiento;
+                tatuad.direccion = this.direccion;
+                tatuad.telefono = this.telefono;
+                tatuad.genero = this.genero.ToString();
+
+
+                Entidades.CommonBC.tatu_CompanyEntities.tatuador.Add(tatuad);
+                Entidades.CommonBC.tatu_CompanyEntities.SaveChanges();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+
+        public bool Buscar()
+        {
+            try
+            {
+                CapaDatos.tatuador tatuad = Entidades.CommonBC.tatu_CompanyEntities.tatuador.First(suck => suck.id_tatuador == this.id_tatuador);
+                this.id_tatuador = tatuad.id_tatuador;
+                this.rut = tatuad.rut;
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+        public bool Update()
+        {
+            try
+            {
+                CapaDatos.tatuador tatuad = new CapaDatos.tatuador();
+                tatuad.id_tatuador = this.id_tatuador;
+                tatuad.rut = this.rut;
+                tatuad.nombres = this.nombres;
+                tatuad.apellidos = this.apellidos;
+                tatuad.fec_nac = this.fecha_nacimiento;
+                tatuad.direccion = this.direccion;
+                tatuad.telefono = this.telefono;
+                tatuad.genero = this.genero.ToString();
+
+                Entidades.CommonBC.tatu_CompanyEntities.SaveChanges();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+        public bool Delete()
+        {
+            try
+            {
+                CapaDatos.tatuador tatuad = new CapaDatos.tatuador();
+                Entidades.CommonBC.tatu_CompanyEntities.tatuador.Remove(tatuad);
+                Entidades.CommonBC.tatu_CompanyEntities.SaveChanges();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
+        }
+
+    }
 }
