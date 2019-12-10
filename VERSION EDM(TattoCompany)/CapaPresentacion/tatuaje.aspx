@@ -4,10 +4,10 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="MenuPlaceHolder1" runat="server">
     <li class="nav-item">
-        <a class="nav-link" href="#">Agregar</a>
+        <a class="nav-link" href="/ventas.aspx">Agregar</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">Listar</a>
+        <a class="nav-link" href="/ventasListar.aspx">Listar</a>
     </li>
 </asp:Content>
 
@@ -22,19 +22,18 @@
             <div class="col">
                 <div class="form-group">
                     <label for="selSize">TAMAÑO:</label>
-                    <asp:TextBox ID="txtTamano" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtTamano" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>
                 <div class="form-group">
                     <label for="selCantColor">CANTIDAD COLORES:</label>
 
-                    <asp:DropDownList ID="DropDownList1" runat="server" CssClass="form-control" placeholder="Cantidad de Colores...">
-                    </asp:DropDownList>
+                    <asp:TextBox ID="txtCantidadColores" runat="server" CssClass="form-control"></asp:TextBox>
+                    
                 </div>
                 <div class="form-group">
                     <label for="selSesiones">CANTIDAD SESIONES:</label>
 
-                    <asp:DropDownList ID="DropDownList2" runat="server" CssClass="form-control" placeholder="Cantidad de Sesiones...">
-                    </asp:DropDownList>
+                    <asp:TextBox ID="txtCantidadSesiones" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>
             
             </div>

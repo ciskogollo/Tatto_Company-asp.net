@@ -4,10 +4,10 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="MenuPlaceHolder1" runat="server">
     <li class="nav-item">
-        <a class="nav-link" href="#">Agregar</a>
+        <a class="nav-link" href="/ventas.aspx">Agregar</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">Listar</a>
+        <a class="nav-link" href="/ventasListar.aspx">Listar</a>
     </li>
 </asp:Content>
 
@@ -30,7 +30,7 @@
 
                     <asp:DropDownList ID="selTatuador" runat="server" CssClass="form-control" placeholder="Elegir Tatuador..." DataSourceID="selTatuadorSDS" DataTextField="nombres" DataValueField="id_tatuador">
                     </asp:DropDownList>
-                    <asp:SqlDataSource ID="selTatuadorSDS" runat="server" ConnectionString="<%$ ConnectionStrings:tatu_companyConnectionString2 %>" SelectCommand="SELECT [id_tatuador], [nombres], [rut], [apellidos] FROM [tatuador] ORDER BY [apellidos], [nombres]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="selTatuadorSDS" runat="server" ConnectionString="<%$ ConnectionStrings:tatu_companyConnectionString %>" SelectCommand="SELECT [id_tatuador], [nombres], [rut], [apellidos] FROM [tatuador] ORDER BY [apellidos], [nombres]"></asp:SqlDataSource>
                 </div>
                 <div class="form-group">
                     <label for="selIDSucursal">Sucursal:</label>

@@ -9,8 +9,8 @@ namespace CapaEntidades
     public class Tatuaje
     {
         private int id_tatuaje;
-        private String tamano;
-        private int cant_color;
+        private string tamano;
+        private string cant_color;
         private int sesiones;
 
         public Tatuaje()
@@ -18,7 +18,7 @@ namespace CapaEntidades
         }
 
 
-        public Tatuaje(int id_tatuaje, string tamano, int cant_color, int sesiones)
+        public Tatuaje(int id_tatuaje, string tamano, string cant_color, int sesiones)
         {
             this.id_tatuaje = id_tatuaje;
             this.tamano = tamano;
@@ -27,8 +27,8 @@ namespace CapaEntidades
         }
 
         public int Id_tatuaje { get => id_tatuaje; set => id_tatuaje = value; }
-        public string Tamaño { get => tamano; set => tamano = value; }
-        public int Cant_color { get => cant_color; set => cant_color = value; }
+        public string Tamano { get => tamano; set => tamano = value; }
+        public string Cant_color { get => cant_color; set => cant_color = value; } // ola esto lo cambie de int pa que tome la bdatos
         public int Sesiones { get => sesiones; set => sesiones = value; }
 
         public bool Agregar()
@@ -38,7 +38,7 @@ namespace CapaEntidades
                 CapaDatos.tatuaje tatuaj = new CapaDatos.tatuaje();
                 tatuaj.id_tatuaje = this.id_tatuaje;
                 tatuaj.tamano = this.tamano;
-                tatuaj.cant_color = this.cant_color.ToString(); //si esta huea no la dejas to.String la mierda pide parsearlo #TURCOCULIORENUNCIA 
+                tatuaj.cant_color = this.cant_color.ToString();
                 tatuaj.sesiones = this.sesiones;
 
                 Entidades.CommonBC.tatu_CompanyEntities.tatuaje.Add(tatuaj);

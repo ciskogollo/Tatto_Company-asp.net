@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CapaDatos;
 
 namespace CapaEntidades
 {
@@ -43,14 +44,17 @@ namespace CapaEntidades
         {
             try
             {
-                CapaDatos.venta vents = new CapaDatos.venta();
-                vents.id_venta = this.id_venta;
-                vents.id_cliente = this.id_cliente;
-                vents.id_tatuador = this.id_tatuador;
-                vents.id_sucursal = this.id_sucursal;
-                vents.id_tatuaje = this.id_tatuaje;
-                vents.fecha_hora = this.fecha_hora;
-                vents.valor_total = this.valor_total;
+                venta vents = new venta()
+                {
+                    id_venta = this.id_venta,
+                    id_cliente = this.id_cliente,
+                    id_tatuador = this.id_tatuador,
+                    id_sucursal = this.id_sucursal,
+                    id_tatuaje = this.id_tatuaje,
+                    fecha_hora = this.fecha_hora,
+                    valor_total = this.valor_total
+                };
+
 
                 Entidades.CommonBC.tatu_CompanyEntities.venta.Add(vents);
                 Entidades.CommonBC.tatu_CompanyEntities.SaveChanges();

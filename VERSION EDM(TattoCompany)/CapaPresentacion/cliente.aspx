@@ -4,10 +4,10 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="MenuPlaceHolder1" runat="server">
     <li class="nav-item">
-        <a class="nav-link" href="#">Agregar</a>
+        <a class="nav-link" href="/cliente.aspx">Agregar</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">Listar</a>
+        <a class="nav-link" href="/clienteListar.aspx">Listar</a>
     </li>
 </asp:Content>
 

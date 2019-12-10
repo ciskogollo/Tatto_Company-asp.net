@@ -69,11 +69,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="clienteListar.aspx" />
     <Content Include="css\simple-sidebar.css" />
     <Content Include="Inicio.aspx" />
     <Content Include="tatuador.aspx" />
     <Content Include="cliente.aspx" />
+    <Content Include="tatuadorListar.aspx" />
     <Content Include="tatuaje.aspx" />
+    <Content Include="tatuajeListar.aspx" />
     <Content Include="vendor\bootstrap\css\bootstrap-grid.css" />
     <Content Include="vendor\bootstrap\css\bootstrap-grid.min.css" />
     <Content Include="vendor\bootstrap\css\bootstrap-reboot.css" />
@@ -93,6 +96,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clienteListar.aspx.cs">
+      <DependentUpon>clienteListar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clienteListar.aspx.designer.cs">
+      <DependentUpon>clienteListar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Inicio.aspx.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -114,6 +124,13 @@
     <Compile Include="cliente.aspx.designer.cs">
       <DependentUpon>cliente.aspx</DependentUpon>
     </Compile>
+    <Compile Include="tatuadorListar.aspx.cs">
+      <DependentUpon>tatuadorListar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tatuadorListar.aspx.designer.cs">
+      <DependentUpon>tatuadorListar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="tatuaje.aspx.cs">
       <DependentUpon>tatuaje.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -129,6 +146,13 @@
       <DependentUpon>Page.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tatuajeListar.aspx.cs">
+      <DependentUpon>tatuajeListar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tatuajeListar.aspx.designer.cs">
+      <DependentUpon>tatuajeListar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ventas.aspx.cs">
       <DependentUpon>ventas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

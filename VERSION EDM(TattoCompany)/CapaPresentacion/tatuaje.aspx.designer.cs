@@ -31,22 +31,22 @@ namespace CapaPresentacion {
         protected global::System.Web.UI.WebControls.TextBox txtTamano;
         
         /// <summary>
-        /// Control DropDownList1.
+        /// Control txtCantidadColores.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.TextBox txtCantidadColores;
         
         /// <summary>
-        /// Control DropDownList2.
+        /// Control txtCantidadSesiones.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+        protected global::System.Web.UI.WebControls.TextBox txtCantidadSesiones;
         
         /// <summary>
         /// Control btnEnviar.

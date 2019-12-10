@@ -12,8 +12,8 @@ F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\Cap
 F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaDatos\bin\Debug\CapaDatos.pdb
 F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaDatos\bin\Debug\EntityFramework.dll
 F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaDatos\bin\Debug\EntityFramework.xml
+F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaDatos\obj\Debug\CapaDatos.csprojAssemblyReference.cache
 F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
 F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
 F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaDatos\obj\Debug\CapaDatos.dll
 F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaDatos\obj\Debug\CapaDatos.pdb
-F:\ASP.net\Trabajo Tatto Company\dev_tatto_company\VERSION EDM(TattoCompany)\CapaDatos\obj\Debug\CapaDatos.csprojAssemblyReference.cache

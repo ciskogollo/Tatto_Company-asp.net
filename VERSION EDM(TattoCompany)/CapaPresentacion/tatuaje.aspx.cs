@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using CapaEntidades;
 
 namespace CapaPresentacion
 {
@@ -16,7 +17,12 @@ namespace CapaPresentacion
 
         protected void btnEnviar_Click(object sender, EventArgs e)
         {
+            Tatuaje objTatu = new Tatuaje();
+            objTatu.Tamano = txtTamano.Text;
+            objTatu.Cant_color = txtCantidadColores.Text;
+            objTatu.Sesiones = Int32.Parse(txtCantidadSesiones.Text);
 
+            objTatu.Agregar();
         }
 
     }

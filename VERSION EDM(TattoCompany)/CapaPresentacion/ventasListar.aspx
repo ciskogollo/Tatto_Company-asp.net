@@ -2,6 +2,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MenuPlaceHolder1" runat="server">
+    <li class="nav-item">
+        <a class="nav-link" href="/ventas.aspx">Agregar</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/ventasListar.aspx">Listar</a>
+    </li>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form id="form1" runat="server">
@@ -41,8 +47,6 @@
                 <asp:Parameter Name="original_valor_total" Type="Int32" />
             </UpdateParameters>
         </asp:SqlDataSource>
-        <asp:EntityDataSource ID="EntityDataSource1" runat="server">
-        </asp:EntityDataSource>
         <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="id_venta" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
             <AlternatingRowStyle BackColor="White" />
             <Columns>

@@ -10,7 +10,7 @@
 namespace CapaPresentacion {
     
     
-    public partial class ventasListar {
+    public partial class clienteListar {
         
         /// <summary>
         /// Control form1.

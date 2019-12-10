@@ -21,7 +21,9 @@
     <!-- contenido dinamico -->
     <form id="form1" runat="server">
         <div class="row">
-            <h2>Bienvenid@</h2>
+            <div class="col">
+                <h2>Bienvenid@</h2>
+            </div>
         </div>
         <div class="row">
             <div class="col-6">
@@ -32,13 +34,12 @@
                 <p></p>
             </div>
         </div>
-        <div class="row">
-            <h2>CONSULTA</h2>
-        </div>
-        
+       
 
         <div class="footer">
-            <asp:Button ID="btnEnviar" runat="server" text="Enviar" CssClass="btn btn-large btn-success" OnClick="btnEnviar_Click" />
+            <p class="text-muted font-weight-lighter">
+                Este trabajo fue hecha con muchas manos, pero muy pocas a la vez.
+            </p>
         </div>  
     </form>
 </asp:Content>
