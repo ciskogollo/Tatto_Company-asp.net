@@ -25,7 +25,7 @@ namespace CapaPresentacion
             objTatuador.Fecha_nacimiento = calendarFecNac.SelectedDate;
             objTatuador.Direccion = txtDireccion.Text;
             objTatuador.Telefono = txtTel.Text;
-            objTatuador.Genero = char.Parse(txtApellidos.Text);
+            objTatuador.Genero = Convert.ToChar(txtGen.Text);
 
             System.Diagnostics.Debug.WriteLine(objTatuador.ToString());
             objTatuador.Agregar();
